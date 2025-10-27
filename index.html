@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Warung Makan Mas Zazzu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #2400f1 0%, #2400f1 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(16, 0, 245, 0.8), rgba(96, 125, 255, 0.8)), 
+                        url('https://images.unsplash.com/photo-1604909053112-42a25b4e4d4a?auto=format&fit=crop&w=1400&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 2rem 100px;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+            animation: fadeInUp 1s ease;
+        }
+
+        /* Section: Kuliner */
+        section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2400f1;
+        }
+
+        .kuliner-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .kuliner {
+            background: #fff5f5;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .kuliner:hover {
+            transform: translateY(-5px);
+        }
+
+        .kuliner img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .kuliner h3 {
+            padding: 1rem;
+            color: #2400f1;
+        }
+
+        .kuliner p {
+            padding: 0 1rem 1.5rem;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background: #2400f1;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            nav ul {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Kuliner Nusantara</div>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#kuliner">Kuliner</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="beranda">
+        <h1>Warung Makan Mas Zazzu</h1>
+        <p>iniloh warung makan mas zazzu dijamin enak-enak dan bikin nagih,
+            cobain deh...</p>
+    </section>
+
+    <section id="kuliner">
+        <h2>Menu Makanan Warung Mas Zazzu</h2>
+        <div class="kuliner-list">
+            <div class="kuliner">
+                <img src="image/sate.jpg" alt="Sate">
+                <h3>Sate Kelinci</h3>
+                <p>Sate kelinci dikenal memiliki tekstur yang lebih empuk dan rasa yang cenderung ringan (mirip daging ayam), serta umumnya disajikan dengan bumbu kacang dan lontong</p>
+            </div>
+
+            <div class="kuliner">
+                <img src="image/nasi padang.jpg" alt="Nasi Padang">
+                <h3>Nasi Padang</h3>
+                <p>Hidangan ini terkenal dengan cita rasa bumbu yang kuat dan gurih, serta cara penyajiannya yang unik di rumah makan Padang, di mana belasan piring berisi lauk langsung ditata di atas meja, memungkinkan pelanggan memilih sesuka hati.</p>
+            </div>
+
+            <div class="kuliner">
+                <img src="image/nasi megono.webp" alt="Nasi Megono">
+                <h3>Nasi Megono Khas Pekalongan</h3>
+                <p>Ini adalah nasi hangat yang disajikan dengan lauk berupa megono, yaitu olahan sayur yang terbuat dari nangka muda yang dicincang, dicampur dengan kelapa parut berbumbu rempah-rempah yang dikukus. Rasanya dominan gurih dengan sedikit sentuhan pedas dan aroma rempah yang khas.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontak">
+        <p>&copy; 2025 Kuliner Nusantara | Cita Rasa Indonesia</p>
+    </footer>
+
+</body>
+</html>
